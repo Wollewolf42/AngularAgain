@@ -1,0 +1,32 @@
+
+<div class="card">
+
+  <div class="card-header">
+    {{subject.name}}
+    <button class="btn btn-danger btn-sm align-right">X</button>
+  </div>
+
+
+
+  <div class="card-body">
+
+    <div class="input-group">
+      <input #e type="number" class="form-control" placeholder="%" >
+      <button class="btn btn-primary" type="submit" (click)="onPushProgress(e.value)" >
+        Fortschritt machen</button>
+    </div>
+
+    <h1></h1>
+
+    <div class="input-group">
+      <h4 class="card-title">Fortschritt: </h4>
+
+      <a *ngFor="let progess of subject.getProgress()">
+
+        <app-progress [progr]="progess" ></app-progress>
+
+      </a>
+    </div>
+  </div>
+</div>
+

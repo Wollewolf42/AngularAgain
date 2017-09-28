@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <div class="input-group">
+    <input #newSubject type="text" class="form-control" placeholder="Neues Fach">
+    <button class="btn btn-primary" type="submit" (click)="onPushSub(newSubject.value)">Neu</button>
+  </div>
+  <hr>
+  <div *ngFor="let subject of subjects">
+    <app-subjects class="col" [subject]="subject"></app-subjects>
+  </div>
+</div>
+
