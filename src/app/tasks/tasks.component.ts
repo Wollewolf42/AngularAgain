@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {TasksService} from "./tasks.service";
 import {Task} from "./tasks.model";
+import {TasksService} from "./tasks.service";
 
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css'],
-  providers: [TasksService]
+  providers: []
 })
 export class TasksComponent implements OnInit {
 

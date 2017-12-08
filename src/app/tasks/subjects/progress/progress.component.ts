@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {TasksService} from "../../tasks.service";
 
 
 @Component({
@@ -10,11 +11,25 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ProgressComponent implements OnInit {
 
   @Input() progr: number;
+  color: number;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
+      if(this.progr < 50){
+          this.color = -1;
+      } else if (this.progr < 75 && this.progr >= 50){
+          this.color = 0;
+      } else if (this.progr >= 75){
+          this.color = 1;
+      } else if (this.progr > 100){
+          this.progr = 100;
+          this.color = 1;
+      }
   }
+
 
 
 }

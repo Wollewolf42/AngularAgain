@@ -1,3 +1,9 @@
-<div class="container">
-  <span class="badge badge-success">{{progr + "%"}}</span>
-</div>
+<!-- If Progress than green: 1-->
+<span *ngIf="color === 1" class="badge badge-success">{{progr + "%"}}</span>
+
+<!-- If No Progress then orange: 0 -->
+<span *ngIf="color === 0" class="badge badge-warning">{{progr + "%"}}</span>
+
+<!-- If negative Progress then red: -1 -->
+<span *ngIf="color === -1" class="badge badge-danger">{{progr + "%"}}</span>
+
